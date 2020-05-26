@@ -12,8 +12,8 @@ const client = new GraphQLClient('https://waitlisted.appixel.dev/v1/graphql', {
 
 passport.use(
   new LocalStrategy({
-    usernameField: 'email',
-    passwordField: 'password'
+    usernameField: 'input[email]',
+    passwordField: 'input[password]'
   },
   async (email, password, done) => {
     // Create user query
